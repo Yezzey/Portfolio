@@ -72,7 +72,7 @@ body {
   height: 4200px;
   width: 4200px;
   transform: translateX(-50%);
-  background-image: url(/img/bg-big.jpg);
+  background-image: url("../img/bg-big.jpg");
   z-index: -5;
 }
 .wrapper header .bg-shadow {
@@ -91,7 +91,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/img/moon.png);
+  background-image: url(../img/moon.png);
   background-size: contain;
   height: 250px;
   width: 250px;

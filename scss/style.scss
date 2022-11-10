@@ -34,7 +34,7 @@ body {
 			width: 4200px;
 
 			transform: translateX(-50%);
-			background-image: url(/img/bg-big.jpg);
+			background-image: url('../img/bg-big.jpg');
 
 			// 			background: rgb(0,11,158);
 			// background: linear-gradient(176deg, rgba(0,11,158,1) 0%, rgba(20,95,110,1) 11%, rgba(25,116,98,1) 15%, rgba(31,141,84,1) 26%, rgba(40,179,63,1) 40%, rgba(38,172,61,1) 43%, rgba(33,150,53,1) 48%, rgba(32,144,51,1) 52%, rgba(0,0,0,1) 100%);
@@ -59,7 +59,7 @@ body {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background-image: url(/img/moon.png);
+			background-image: url(../img/moon.png);
 			background-size: contain;
 			height: 250px;
 			width: 250px;
