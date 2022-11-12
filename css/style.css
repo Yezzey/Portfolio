@@ -20,9 +20,9 @@
 
 .star-shadow-l {
   position: absolute;
-  top: 2vh;
-  left: -250px;
-  font-size: 400px;
+  top: 0;
+  left: -70vw;
+  font-size: 200px;
   -webkit-animation: star-rot 250s infinite linear;
           animation: star-rot 250s infinite linear;
   text-shadow: -10px 15px 10px rgba(0, 0, 0, 0.226);
@@ -31,15 +31,48 @@
 
 .star-shadow-rb {
   position: absolute;
-  top: 75vh;
-  left: 80vw;
-  font-size: 200px;
+  top: 70vh;
+  left: 30vw;
+  font-size: 400px;
   -webkit-animation: star-rot-back 200s infinite linear;
           animation: star-rot-back 200s infinite linear;
-  text-shadow: -10px 15px 10px rgba(0, 0, 0, 0.226);
+  text-shadow: -10px 10px 10px rgba(0, 0, 0, 0.226);
   color: rgba(0, 0, 0, 0);
 }
 
+@-webkit-keyframes star-rot {
+  0% {
+    transform: rotate(-100deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes star-rot {
+  0% {
+    transform: rotate(-100deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@-webkit-keyframes star-rot-back {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes star-rot-back {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 *,
 ::before,
 ::after {
@@ -55,6 +88,21 @@ body {
   color: white;
   width: 100vw;
   overflow-x: hidden;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 10px #000;
+}
+
+.underline {
+  margin: 0 auto 40px;
+  width: 120px;
+  height: 4px;
+  background-color: #039dff;
+  box-shadow: 5px 5px 10px #000;
 }
 
 .wrapper {
@@ -87,7 +135,7 @@ body {
 .wrapper header .moon-clock {
   position: absolute;
   top: 80px;
-  right: 40px;
+  right: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,56 +229,26 @@ body {
 }
 .wrapper header .stars {
   position: absolute;
+  top: 0;
+  left: 50%;
 }
 .wrapper header .stars .star-l {
   position: absolute;
-  top: 2vh;
-  left: -250px;
-  font-size: 400px;
+  top: 8vh;
+  left: -54vw;
+  font-size: 200px;
   -webkit-animation: star-rot 250s infinite linear;
           animation: star-rot 250s infinite linear;
   opacity: 0.1;
 }
 .wrapper header .stars .star-rb {
   position: absolute;
-  top: 75vh;
-  left: 80vw;
-  font-size: 200px;
+  top: 55vh;
+  left: 25vw;
+  font-size: 400px;
   -webkit-animation: star-rot-back 200s infinite linear;
           animation: star-rot-back 200s infinite linear;
   opacity: 0.1;
-}
-@-webkit-keyframes star-rot {
-  0% {
-    transform: rotate(-100deg);
-  }
-  100% {
-    transform: rotate(405deg);
-  }
-}
-@keyframes star-rot {
-  0% {
-    transform: rotate(-100deg);
-  }
-  100% {
-    transform: rotate(405deg);
-  }
-}
-@-webkit-keyframes star-rot-back {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes star-rot-back {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 .wrapper .nav-box {
   display: flex;
@@ -278,10 +296,52 @@ body {
   margin-left: 34px;
 }
 
-.know-box {
-  height: 100px;
-  width: 100px;
-  background-color: white;
+main .know {
+  height: 100vh;
+}
+main .know .know-boxes {
+  display: flex;
+  justify-content: center;
+}
+main .know .know-boxes .box-view {
+  width: 35%;
+  margin: 10px;
+  height: 350px;
+}
+main .know .know-boxes .box-view .box-title {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+main .know .know-boxes .box-view li {
+  margin: 5px 20px;
+}
+main .know .know-boxes .box-view .s-l {
+  margin-top: 35px;
+}
+main .know .know-boxes .box-view .soon-grey {
+  margin-top: 6px;
+  font-size: 14px;
+  color: grey;
+}
+main .about {
+  height: 100vh;
+}
+main .about .about-text {
+  display: flex;
+  justify-content: center;
+}
+main .about .about-text .about-box {
+  width: 75%;
+}
+main .about .about-text .about-box .a-first {
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+main .about .about-text .about-box p {
+  margin: 20px;
+  font-size: 20px;
+  text-shadow: 5px 5px 5px #000;
 }
 
 @media (min-width: 576px) {
