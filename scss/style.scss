@@ -279,6 +279,10 @@ main {
 					margin: 5px 20px;
 				}
 
+				::marker {
+					content: '✔ ';
+				}
+
 				.s-l {
 					margin-top: 35px;
 				}
@@ -298,7 +302,7 @@ main {
 		.about-text {
 			display: flex;
 			justify-content: center;
-	
+
 			.about-box {
 				width: 75%;
 				.a-first {
@@ -309,6 +313,41 @@ main {
 					margin: 20px;
 					font-size: 20px;
 					text-shadow: 5px 5px 5px #000;
+				}
+			}
+		}
+	}
+
+	.experience {
+		height: 100vh;
+		> p {
+			text-align: center;
+			font-size: 20px;
+			margin-bottom: 30px;
+			text-shadow: 5px 5px 5px #000;
+		}
+		.exp-box {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			.box-view {
+				height: 200px;
+
+				font-size: 15px;
+
+				.ttext {
+					color: rgba(179, 179, 179, 0.411);
+					background-color: rgba(255, 255, 255, 0.075);
+					margin-top: 25px;
+					font-size: 18px;
+					padding: 3px 10px;
+					border-radius: 10px;
+				}
+
+				p {
+					font-size: 15px;
+					margin: 10px;
 				}
 			}
 		}
