@@ -41,6 +41,28 @@
   color: rgba(0, 0, 0, 0);
 }
 
+.nav-btn-hover::before,
+.nav-btn-hover::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.nav-btn-hover::before {
+  right: 50%;
+}
+
+.nav-btn-hover::after {
+  left: 50%;
+}
+
+.nav-btn-hover:hover::before,
+.nav-btn-hover:hover::after {
+  width: 50%;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 2px;
@@ -102,6 +124,11 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -153,101 +180,6 @@ body {
   background-color: rgba(0, 0, 0, 0.329);
   z-index: -5;
 }
-.wrapper header .moon-clock {
-  position: absolute;
-  top: 80px;
-  right: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/moon.png);
-  background-size: contain;
-  height: 250px;
-  width: 250px;
-  z-index: 10;
-  opacity: 0.4;
-  color: rgba(255, 255, 255, 0.568);
-}
-.wrapper header .moon-clock .clock {
-  position: relative;
-  height: 500px;
-  min-width: 500px;
-  border-radius: 50%;
-  transform: scale(0.415);
-}
-.wrapper header .moon-clock .clock .number {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-  transform: rotate(0);
-}
-.wrapper header .moon-clock .clock .number1 {
-  transform: rotate(30deg);
-}
-.wrapper header .moon-clock .clock .number2 {
-  transform: rotate(60deg);
-}
-.wrapper header .moon-clock .clock .number3 {
-  transform: rotate(90deg);
-}
-.wrapper header .moon-clock .clock .number4 {
-  transform: rotate(120deg);
-}
-.wrapper header .moon-clock .clock .number5 {
-  transform: rotate(150deg);
-}
-.wrapper header .moon-clock .clock .number6 {
-  transform: rotate(180deg);
-}
-.wrapper header .moon-clock .clock .number7 {
-  transform: rotate(210deg);
-}
-.wrapper header .moon-clock .clock .number8 {
-  transform: rotate(240deg);
-}
-.wrapper header .moon-clock .clock .number9 {
-  transform: rotate(270deg);
-}
-.wrapper header .moon-clock .clock .number10 {
-  transform: rotate(300deg);
-}
-.wrapper header .moon-clock .clock .number11 {
-  transform: rotate(330deg);
-}
-.wrapper header .moon-clock .clock .hand {
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  height: 45%;
-  width: 16px;
-  transform: translateX(-50%) rotate(0);
-  transform-origin: bottom;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.wrapper header .moon-clock .clock .hour {
-  height: 37%;
-  background-color: rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: invert(10%);
-          backdrop-filter: invert(10%);
-}
-.wrapper header .moon-clock .clock .minute {
-  height: 45%;
-  width: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateX(-50%) rotate(0);
-  -webkit-backdrop-filter: invert(20%);
-          backdrop-filter: invert(20%);
-}
-.wrapper header .moon-clock .clock .second {
-  height: 48%;
-  width: 4px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
 .wrapper header .stars {
   position: absolute;
   top: 0;
@@ -271,7 +203,7 @@ body {
           animation: star-rot-back 200s infinite linear;
   opacity: 0.1;
 }
-.wrapper .nav-box {
+.wrapper nav .nav-box {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -281,20 +213,31 @@ body {
   color: white;
   text-shadow: 5px 5px 10px #000;
 }
-.wrapper .nav-box .nav-home i {
-  margin-right: 4px;
+.wrapper nav .nav-box a {
+  position: relative;
+  text-decoration: none;
+  color: white;
 }
-.wrapper .nav-box .nav-center {
+.wrapper nav .nav-box .nav-btn-hover,
+.wrapper nav .nav-box .nav-btn-hover::after,
+.wrapper nav .nav-box .nav-btn-hover::before {
+  transition: 0.3s;
+}
+.wrapper nav .nav-box .nav-home i {
+  margin-right: 4px;
+  margin-bottom: 10px;
+}
+.wrapper nav .nav-box .nav-center {
   display: flex;
   justify-content: space-between;
 }
-.wrapper .nav-box .nav-center div {
-  margin: 0 5px;
-  padding: 0 10px;
+.wrapper nav .nav-box .nav-center a {
+  margin: 0 15px;
+  padding: 0 5px;
 }
 .wrapper .hi-text {
   margin-left: 30px;
-  margin-top: 130px;
+  margin-top: 23vh;
   font-weight: bold;
   text-shadow: 5px 5px 10px #000;
 }
@@ -315,6 +258,101 @@ body {
 }
 .wrapper .stars2 {
   margin-left: 34px;
+}
+.wrapper .moon-clock {
+  position: relative;
+  top: -380px;
+  left: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/moon.png);
+  background-size: contain;
+  height: 250px;
+  width: 250px;
+  z-index: 10;
+  opacity: 0.4;
+  color: rgba(255, 255, 255, 0.568);
+}
+.wrapper .moon-clock .clock {
+  position: relative;
+  height: 500px;
+  min-width: 500px;
+  border-radius: 50%;
+  transform: scale(0.415);
+}
+.wrapper .moon-clock .clock .number {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  transform: rotate(0);
+}
+.wrapper .moon-clock .clock .number1 {
+  transform: rotate(30deg);
+}
+.wrapper .moon-clock .clock .number2 {
+  transform: rotate(60deg);
+}
+.wrapper .moon-clock .clock .number3 {
+  transform: rotate(90deg);
+}
+.wrapper .moon-clock .clock .number4 {
+  transform: rotate(120deg);
+}
+.wrapper .moon-clock .clock .number5 {
+  transform: rotate(150deg);
+}
+.wrapper .moon-clock .clock .number6 {
+  transform: rotate(180deg);
+}
+.wrapper .moon-clock .clock .number7 {
+  transform: rotate(210deg);
+}
+.wrapper .moon-clock .clock .number8 {
+  transform: rotate(240deg);
+}
+.wrapper .moon-clock .clock .number9 {
+  transform: rotate(270deg);
+}
+.wrapper .moon-clock .clock .number10 {
+  transform: rotate(300deg);
+}
+.wrapper .moon-clock .clock .number11 {
+  transform: rotate(330deg);
+}
+.wrapper .moon-clock .clock .hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  height: 45%;
+  width: 16px;
+  transform: translateX(-50%) rotate(0);
+  transform-origin: bottom;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.wrapper .moon-clock .clock .hour {
+  height: 37%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: invert(10%);
+          backdrop-filter: invert(10%);
+}
+.wrapper .moon-clock .clock .minute {
+  height: 45%;
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%) rotate(0);
+  -webkit-backdrop-filter: invert(20%);
+          backdrop-filter: invert(20%);
+}
+.wrapper .moon-clock .clock .second {
+  height: 48%;
+  width: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 main .know {

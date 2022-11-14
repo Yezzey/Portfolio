@@ -21,25 +21,7 @@
         <header class="header">
             <div class="bg-img"></div>
             <div class="bg-shadow"></div>
-            <div class="moon-clock">
-                <div class="clock">
-                    <div class="hand hour"></div>
-                    <div class="hand minute"></div>
-                    <div class="hand second"></div>
-                    <div class="number number1">1</div>
-                    <div class="number number2">2</div>
-                    <div class="number number3">3</div>
-                    <div class="number number4">4</div>
-                    <div class="number number5">5</div>
-                    <div class="number number6">6</div>
-                    <div class="number number7">7</div>
-                    <div class="number number8">8</div>
-                    <div class="number number9">9</div>
-                    <div class="number number10">10</div>
-                    <div class="number number11">11</div>
-                    <div class="number">12</div>
-                </div>
-            </div>
+            
 
             <div class="stars">
                 <i class="fa-regular fa-star star-shadow-l">
@@ -53,14 +35,14 @@
 
             <nav>
                 <div class="nav-box container">
-                    <div class="nav-home" href="#"><i class="fa-solid fa-earth-africa"></i>HOME</div>
+                    <a class="nav-home" href="#"><i class="fa-solid fa-earth-africa"></i>HOME</a>
                     <div class="nav-center">
-                        <div class="nav-know" href="#">Kwalifikacje</div>
-                        <div class="nav-aboutme" href="#">O mnie</div>
-                        <div class="experience" href="#">Doświadczenie</div>
-                        <div class="projects" href="#">Projekty</div>
+                        <a class="nav-know nav-btn-hover" href="#qualifications">Kwalifikacje</a>
+                        <a class="nav-aboutme nav-btn-hover" href="#aboutme">O mnie</a>
+                        <a class="experience nav-btn-hover" href="#experience">Doświadczenie</a>
+                        <a class="projects nav-btn-hover" href="#projects">Projekty</a>
                     </div>
-                    <div class="contact" href="#">Kontakt</div>
+                    <a class="contact nav-btn-hover" href="#">Kontakt</a> <!-- CZEMU TU NIE DZIAŁA MARGIN BOTTOM!? -->
                 </div>
             </nav>
 
@@ -78,6 +60,26 @@
                     <i class="fa-regular fa-star gold-gradient star-rb"></i>
                 </div>
 
+                <div class="moon-clock">
+                    <div class="clock">
+                        <div class="hand hour"></div>
+                        <div class="hand minute"></div>
+                        <div class="hand second"></div>
+                        <div class="number number1">1</div>
+                        <div class="number number2">2</div>
+                        <div class="number number3">3</div>
+                        <div class="number number4">4</div>
+                        <div class="number number5">5</div>
+                        <div class="number number6">6</div>
+                        <div class="number number7">7</div>
+                        <div class="number number8">8</div>
+                        <div class="number number9">9</div>
+                        <div class="number number10">10</div>
+                        <div class="number number11">11</div>
+                        <div class="number">12</div>
+                    </div>
+                </div>
+
             </section>
 
         </header>
@@ -86,7 +88,7 @@
 
         <main>
 
-            <section class="know container">
+            <section id="qualifications"class="know container">
                 <div class="title">
                     Kwalifikacje
                 </div>
@@ -112,7 +114,7 @@
                 </div>
             </section>
 
-            <section class="about container">
+            <section id="aboutme" class="about container">
                 <div class="title">o mnie</div>
                 <div class="underline"></div>
                 <div class="about-text">
@@ -139,7 +141,7 @@
             </section>
 
 
-            <section class="experience container">
+            <section id="experience" class="experience container">
                 <div class="title">doświadczenie</div>
                 <div class="underline"></div>
 

@@ -47,6 +47,29 @@
 }
 
 
+.nav-btn-hover::before,
+.nav-btn-hover::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	bottom: 0;
+	border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.nav-btn-hover::before {
+	right: 50%;
+}
+
+.nav-btn-hover::after {
+	left: 50%;
+}
+
+.nav-btn-hover:hover::before,
+.nav-btn-hover:hover::after {
+	width: 50%;
+}
+
+
 
 
 /* width */
@@ -68,6 +91,8 @@
   ::-webkit-scrollbar-thumb:hover {
 	background: #555;
   }
+
+  
 
 
 // /* width */
