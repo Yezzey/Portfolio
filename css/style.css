@@ -21,8 +21,8 @@
 
 .star-shadow-l {
   position: absolute;
-  top: 0;
-  left: -70vw;
+  top: 90px;
+  left: -15%;
   font-size: 200px;
   -webkit-animation: star-rot 250s infinite linear;
           animation: star-rot 250s infinite linear;
@@ -32,8 +32,8 @@
 
 .star-shadow-rb {
   position: absolute;
-  top: 70vh;
-  left: 30vw;
+  bottom: -80px;
+  right: -25%;
   font-size: 400px;
   -webkit-animation: star-rot-back 200s infinite linear;
           animation: star-rot-back 200s infinite linear;
@@ -126,7 +126,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 10vh;
+  scroll-padding-bottom: 100px;
 }
 
 body {
@@ -155,53 +155,15 @@ body {
 
 .wrapper {
   position: relative;
-  height: 4200px;
+  height: 520vh;
   overflow: hidden;
 }
-.wrapper header {
-  height: 100vh;
-}
-.wrapper header .bg-img {
+.wrapper nav {
   position: absolute;
   top: 0;
   left: 50%;
-  height: 4200px;
-  width: 4200px;
   transform: translateX(-50%);
-  background-image: url("../img/bg-big.jpg");
-  z-index: -5;
-}
-.wrapper header .bg-shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.329);
-  z-index: -5;
-}
-.wrapper header .stars {
-  position: absolute;
-  top: 0;
-  left: 50%;
-}
-.wrapper header .stars .star-l {
-  position: absolute;
-  top: 8vh;
-  left: -54vw;
-  font-size: 200px;
-  -webkit-animation: star-rot 250s infinite linear;
-          animation: star-rot 250s infinite linear;
-  opacity: 0.1;
-}
-.wrapper header .stars .star-rb {
-  position: absolute;
-  top: 55vh;
-  left: 25vw;
-  font-size: 400px;
-  -webkit-animation: star-rot-back 200s infinite linear;
-          animation: star-rot-back 200s infinite linear;
-  opacity: 0.1;
+  z-index: 5;
 }
 .wrapper nav .nav-box {
   display: flex;
@@ -235,34 +197,64 @@ body {
   margin: 0 15px;
   padding: 0 5px;
 }
-.wrapper .hi-text {
+.wrapper header {
+  height: 100vh;
+}
+.wrapper header .bg-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 520vh;
+  width: 800vh;
+  background-image: url("../img/bg-big.jpg");
+  transform: translateX(-50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -5;
+}
+.wrapper header .bg-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.329);
+  z-index: -5;
+}
+.wrapper header .hi {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.wrapper header .hi .hi-text {
   margin-left: 30px;
-  margin-top: 23vh;
   font-weight: bold;
   text-shadow: 5px 5px 10px #000;
 }
-.wrapper .hi-text__1 {
+.wrapper header .hi .hi-text__1 {
   margin-left: 40px;
   font-size: 60px;
 }
-.wrapper .hi-text__2 {
+.wrapper header .hi .hi-text__2 {
   margin-left: 25px;
   font-size: 65px;
 }
-.wrapper .hi-text__3 {
+.wrapper header .hi .hi-text__3 {
   margin-top: 7px;
   font-size: 46px;
 }
-.wrapper .hi-text__4 {
+.wrapper header .hi .hi-text__4 {
   font-size: 20px;
 }
-.wrapper .stars2 {
-  margin-left: 34px;
+.wrapper header .hi .stars2 {
+  margin-left: 6px;
 }
-.wrapper .moon-clock {
-  position: relative;
-  top: -380px;
-  left: 900px;
+.wrapper header .hi .moon-clock {
+  position: absolute;
+  top: 12vh;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,17 +263,17 @@ body {
   height: 250px;
   width: 250px;
   z-index: 10;
-  opacity: 0.4;
+  opacity: 0.5;
   color: rgba(255, 255, 255, 0.568);
 }
-.wrapper .moon-clock .clock {
+.wrapper header .hi .moon-clock .clock {
   position: relative;
   height: 500px;
   min-width: 500px;
   border-radius: 50%;
   transform: scale(0.415);
 }
-.wrapper .moon-clock .clock .number {
+.wrapper header .hi .moon-clock .clock .number {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -290,40 +282,40 @@ body {
   font-size: 3rem;
   transform: rotate(0);
 }
-.wrapper .moon-clock .clock .number1 {
+.wrapper header .hi .moon-clock .clock .number1 {
   transform: rotate(30deg);
 }
-.wrapper .moon-clock .clock .number2 {
+.wrapper header .hi .moon-clock .clock .number2 {
   transform: rotate(60deg);
 }
-.wrapper .moon-clock .clock .number3 {
+.wrapper header .hi .moon-clock .clock .number3 {
   transform: rotate(90deg);
 }
-.wrapper .moon-clock .clock .number4 {
+.wrapper header .hi .moon-clock .clock .number4 {
   transform: rotate(120deg);
 }
-.wrapper .moon-clock .clock .number5 {
+.wrapper header .hi .moon-clock .clock .number5 {
   transform: rotate(150deg);
 }
-.wrapper .moon-clock .clock .number6 {
+.wrapper header .hi .moon-clock .clock .number6 {
   transform: rotate(180deg);
 }
-.wrapper .moon-clock .clock .number7 {
+.wrapper header .hi .moon-clock .clock .number7 {
   transform: rotate(210deg);
 }
-.wrapper .moon-clock .clock .number8 {
+.wrapper header .hi .moon-clock .clock .number8 {
   transform: rotate(240deg);
 }
-.wrapper .moon-clock .clock .number9 {
+.wrapper header .hi .moon-clock .clock .number9 {
   transform: rotate(270deg);
 }
-.wrapper .moon-clock .clock .number10 {
+.wrapper header .hi .moon-clock .clock .number10 {
   transform: rotate(300deg);
 }
-.wrapper .moon-clock .clock .number11 {
+.wrapper header .hi .moon-clock .clock .number11 {
   transform: rotate(330deg);
 }
-.wrapper .moon-clock .clock .hand {
+.wrapper header .hi .moon-clock .clock .hand {
   position: absolute;
   left: 50%;
   bottom: 50%;
@@ -335,13 +327,13 @@ body {
   border-top-right-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
-.wrapper .moon-clock .clock .hour {
+.wrapper header .hi .moon-clock .clock .hour {
   height: 37%;
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: invert(10%);
           backdrop-filter: invert(10%);
 }
-.wrapper .moon-clock .clock .minute {
+.wrapper header .hi .moon-clock .clock .minute {
   height: 45%;
   width: 10px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -349,81 +341,107 @@ body {
   -webkit-backdrop-filter: invert(20%);
           backdrop-filter: invert(20%);
 }
-.wrapper .moon-clock .clock .second {
+.wrapper header .hi .moon-clock .clock .second {
   height: 48%;
   width: 4px;
   background-color: rgba(255, 255, 255, 0.2);
 }
-
-main .know {
-  height: 100vh;
+.wrapper header .hi .stars .star-l {
+  position: absolute;
+  top: 90px;
+  left: -15%;
+  font-size: 200px;
+  -webkit-animation: star-rot 250s infinite linear;
+          animation: star-rot 250s infinite linear;
+  opacity: 0.2;
 }
-main .know .know-boxes {
+.wrapper header .hi .stars .star-rb {
+  position: absolute;
+  bottom: -80px;
+  right: -25%;
+  font-size: 400px;
+  -webkit-animation: star-rot-back 200s infinite linear;
+          animation: star-rot-back 200s infinite linear;
+  opacity: 0.1;
+}
+.wrapper main .know {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper main .know .know-boxes {
   display: flex;
   justify-content: center;
 }
-main .know .know-boxes .box-view {
+.wrapper main .know .know-boxes .box-view {
   width: 35%;
   margin: 10px;
   height: 350px;
 }
-main .know .know-boxes .box-view .box-title {
+.wrapper main .know .know-boxes .box-view .box-title {
   font-size: 25px;
   text-align: center;
   margin-bottom: 25px;
 }
-main .know .know-boxes .box-view li {
+.wrapper main .know .know-boxes .box-view li {
   margin: 5px 20px;
 }
-main .know .know-boxes .box-view ::marker {
+.wrapper main .know .know-boxes .box-view ::marker {
   content: "✔ ";
 }
-main .know .know-boxes .box-view .s-l {
+.wrapper main .know .know-boxes .box-view .s-l {
   margin-top: 35px;
 }
-main .know .know-boxes .box-view .soon-grey {
+.wrapper main .know .know-boxes .box-view .soon-grey {
   margin-top: 6px;
   font-size: 14px;
   color: grey;
 }
-main .about {
+.wrapper main .about {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-main .about .about-text {
+.wrapper main .about .about-text {
   display: flex;
   justify-content: center;
 }
-main .about .about-text .about-box {
+.wrapper main .about .about-text .about-box {
   width: 75%;
 }
-main .about .about-text .about-box .a-first {
+.wrapper main .about .about-text .about-box .a-first {
   margin-bottom: 30px;
   text-decoration: underline;
 }
-main .about .about-text .about-box p {
+.wrapper main .about .about-text .about-box p {
   margin: 20px;
   font-size: 20px;
   text-shadow: 5px 5px 5px #000;
 }
-main .experience {
+.wrapper main .experience {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-main .experience > p {
+.wrapper main .experience > p {
   text-align: center;
   font-size: 20px;
   margin-bottom: 30px;
   text-shadow: 5px 5px 5px #000;
 }
-main .experience .exp-box {
+.wrapper main .experience .exp-box {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-main .experience .exp-box .box-view {
+.wrapper main .experience .exp-box .box-view {
   height: 200px;
   font-size: 15px;
 }
-main .experience .exp-box .box-view .ttext {
+.wrapper main .experience .exp-box .box-view .ttext {
   color: rgba(179, 179, 179, 0.411);
   background-color: rgba(255, 255, 255, 0.075);
   margin-top: 25px;
@@ -431,9 +449,13 @@ main .experience .exp-box .box-view .ttext {
   padding: 3px 10px;
   border-radius: 10px;
 }
-main .experience .exp-box .box-view p {
+.wrapper main .experience .exp-box .box-view input + p {
+  margin-top: 25px;
+}
+.wrapper main .experience .exp-box .box-view p {
   font-size: 15px;
   margin: 10px;
+  text-shadow: 0 0 5px #000;
 }
 
 @media (min-width: 576px) {

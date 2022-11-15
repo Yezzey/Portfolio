@@ -28,8 +28,8 @@
 
 .star-shadow-l {
 	position: absolute;
-	top: 0;
-	left: -70vw;
+	top: 90px;
+	left: -15%;
 	font-size: 200px;
 	animation: star-rot 250s infinite linear;
 	text-shadow: -10px 15px 10px rgba(0, 0, 0, 0.226);
@@ -38,8 +38,8 @@
 
 .star-shadow-rb {
 	position: absolute;
-	top: 70vh;
-	left: 30vw;
+	bottom: -80px;
+	right: -25%;
 	font-size: 400px;
 	animation: star-rot-back 200s infinite linear;
 	text-shadow: -10px 10px 10px rgba(0, 0, 0, 0.226);
